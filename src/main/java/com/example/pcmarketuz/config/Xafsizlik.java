@@ -26,10 +26,6 @@ public class Xafsizlik extends WebSecurityConfigurerAdapter {
                 .withUser("operator").password(passwordEncoder().encode("operator")).roles("OPERATOR").authorities("READ_ALL_ORDER","ADD_ORDER","READ_ONE_ORDER");
 
     }
-//    SUPER_ADMIN, MODERATOR va OPERATOR rollari bo’lsin.
-//    SUPER_ADMIN har qanday ishni qila oladi;
-//    MODERATOR mahsulot qo’sha oladi va tahrirlay oladi ,ammo o’chira olmaydi;
-//    OPERATOR buyurtmalar bilan ishlaydi, mahsulotni o'chira olmaydi va tahrirlay olmaydi.
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
